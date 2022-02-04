@@ -1,0 +1,130 @@
+body{
+    margin: 100px;
+    background-color: bisque;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.button{
+    justify-self: center;
+    width: 150px;
+    margin: 15px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 15px;
+    color: rgb(243, 237, 237);
+    background: #0d90c4;
+
+}
+#btn1:hover{
+    transform: scale(1.5);
+    transition-timing-function: ease-out;
+    background-color: rgb(241, 175, 50);
+}
+#btn2{
+    transition: all 4s;
+    transition-timing-function: ease-out(0.25)
+}
+#btn2:hover{
+    width: 400px;
+    border-radius: 50px;
+    background-color: rgb(73, 129, 48);   
+}
+#btn2:active{
+    animation-name: clickstate;
+    animation-duration: 5s;
+}
+@keyframes clickstate {
+    0%{ width: 400px;}
+
+    50%{ width: 200px;}
+        
+    100%{ width: 400px;}
+    
+}
+nav{
+    justify-self: center;
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+.navbtn{
+    width: 150px;
+    border-radius: 50px;
+    text-align: center;
+    padding: 15px;
+    color: rgb(243, 237, 237);
+    background: #a43780;
+}
+#m1{
+    border-radius: 50px;
+    transition-duration: 2s;
+}
+#m1:hover{
+    cursor: pointer;
+    transform: rotate(20deg);
+    background-color: cyan;
+}
+#m2{
+    transition: all 3s;
+    background-color: #a43780;
+    animation-duration: 2s; 
+}
+#m2:hover{
+    cursor: pointer;
+    animation-name: menu2;
+}
+@keyframes menu2 {
+    0%{
+        background-color:#a43780;
+    }
+    25%{
+        background-color: #a52a2a;
+        color: rgb(35, 142, 204);
+    }
+    50%{
+        background-color: #ff7f50;
+        color: rgb(183, 216, 35);
+    }
+    75%{
+        background-color: #b8860b;
+        border-radius: 100px;
+        color: black;
+    }
+    100%{
+        background-color: #00ff62;
+        color: black;
+       
+    }
+}
+#m3:hover{
+    transition: 4s linear;
+    cursor: pointer;
+    transform: skew(20deg) scale(2);
+    background-color: gold;
+    color: rgb(224, 5, 5);
+
+}
+
+img{
+    width: 300px;
+    height: 300px;
+    margin: 10px;
+    justify-self: center;
+}
+.image1{
+    transition: all 4s;
+}
+.image1:hover{
+    transform: rotate(100deg) scale(0.5);
+}
+.image2:hover{
+    animation-name: BLM;
+    animation-duration: 6s;
+    transition-timing-function: ease-out;
+}
+@keyframes BLM {
+   from {transform: translate(200px, 100px);}
+    50%{transform: translate(100px) scale(2);}
+   to {transform: translateY(50px);}
+    
+}
